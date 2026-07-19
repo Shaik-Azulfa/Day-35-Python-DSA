@@ -1,0 +1,16 @@
+class Solution:
+    def deleteNode(self, node):
+        # node is the node to be deleted, not the head and not tail
+        node.data = node.next.data
+        node.next = node.next.next
+  class Solution:
+    def decimalValue(self, head):
+        MOD = 10**9 + 7
+        res = 0
+        curr = head
+        
+        while curr:
+            res = (res * 2 + curr.data) % MOD
+            curr = curr.next
+            
+        return res
